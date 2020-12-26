@@ -1,0 +1,27 @@
+//Breakpoints Media Queries
+@media(min-width: 64em){
+    //styles go here
+
+}
+
+$breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
+$breakpoints-down: ("small": "39.9375em", "medium": "39.9375em", "large": "87.4375em");
+/*Vas cree les valeurs texte 640px, 1024px, 1400px
+*$size -> 639px, 1023px, 1399px
+*/
+
+/** mixing name(parametre){ coller bloc code @content contenue d'origine} */
+@mixin breakpoint-up($size){
+    @media (min-width: map-get($breakpoints-up, $size)){
+        @content;
+    }
+
+}
+
+@mixin breakpoint-down($size){
+    @media (max-width: map-get($breakpoints-down, $size)){
+        @content;
+    }
+
+}
+/** @mixin name (argument){}*/

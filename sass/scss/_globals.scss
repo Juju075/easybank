@@ -1,0 +1,79 @@
+
+@import"_mixins.scss";
+
+// markup = balises
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+
+}
+/* a voir html ou (*) */
+/* box-sizing définit la façon dont la hauteur et la largeur totale d'un élément est calculé  */
+
+*, *::before, *::after{
+    box-sizing: inherit;
+
+}
+/* utilisée avec ::before et ::after afin de générer le contenu d'un élément. */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Public Sans', sans-serif;
+    font-size: $font-med;
+    color: $grayishBlue;
+    line-height: 1.3;
+    
+}
+/* line-height définit la hauteur de la boîte d'une ligne espace entre ligne. */
+
+a, a:visited, a:hover{
+    text-decoration: none;
+    color: $grayishBlue;
+}
+
+
+/* Attention syntax sass */
+.flex{
+    display: flex;
+    &-jc-sb{
+    justify-content: space-between;
+    }
+    &-jc-c{
+    justify-content: space-between;
+    }
+    &-ai-c{
+    align-content: center;
+    }
+}
+
+//Buttons
+button, .button{
+    padding:0.875rem 2.1875rem;
+    background: linear-gradient(to right, $limeGreen, $darkBlue);
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+}
+/* button, .button double selecteur
+* font-weight permet de définir la graisse utilisée pour le texte
+*/
+
+ 
+//Visibility élements
+
+.hide-for-mobile{
+    //hide for mobile and tablet
+    @include breakpoint-down(medium){
+        display: none;
+    }
+
+}
+.hide-for-desktop{
+    @include breakpoint-up(large){
+        display: none;
+    }
+
+}
