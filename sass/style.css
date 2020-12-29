@@ -1,9 +1,9 @@
 @charset "UTF-8";
-/*Vas cree les valeurs texte 640px, 1024px, 1400px
-*$size -> 639px, 1023px, 1399px
+/*
+*
 */
-/** mixing name(parametre){ coller bloc code @content contenue d'origine} */
 /** @mixin name (argument){}*/
+/** mixing name(parametre){ coller bloc code @content contenue d'origine} */
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -28,10 +28,9 @@ body {
 /* line-height définit la hauteur de la boîte d'une ligne espace entre ligne. */
 a, a:visited, a:hover {
   text-decoration: none;
-  color: #9698a6;
+  color: white;
 }
 
-/* Attention syntax sass */
 .flex {
   display: flex;
 }
@@ -58,7 +57,7 @@ button, .button {
 /* button, .button double selecteur
 * font-weight permet de définir la graisse utilisée pour le texte
 */
-@media (max-width: 39.9375em) {
+@media (max-width: 63.9375em) {
   .hide-for-mobile {
     display: none;
   }
@@ -70,9 +69,39 @@ button, .button {
   }
 }
 
+/** @include Basecode */
+.container {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 /** Section */
+.header {
+  /** 
+  * Ajoute une animation fade-in a .overlay
+  *Selecteur d'element fils '>' permet de sélectionner les nœuds qui sont des fils directs 
+  *d'un élément donné.
+  */
+  /** position */
+}
+.header .open .overlay {
+  display: block;
+  animation: fade-in 300ms ease-in-out forwards;
+}
+.header .open .header__menu > span:first-child {
+  transform: rotate(45deg);
+}
+.header .open .header__menu > span:nth-child(2) {
+  opacity: 0;
+}
+.header .open .header__menu > span:last-child {
+  transform: rotate(-45deg);
+}
 .header nav {
-  padding: 24px;
+  padding-top: 1.0625rem;
+  padding-bottom: 1.0625rem;
 }
 .header__logo img {
   width: 8.8125rem;
@@ -83,24 +112,79 @@ button, .button {
   width: 26px;
   height: 2px;
   background-color: #2d314d;
+  transition: color 200ms ease-in-out;
+  transform-origin: 3px 1px;
 }
 .header__menu > span:not(:last-child) {
   margin-bottom: 5px;
 }
+.header__menu {
+  position: absolute;
+  width: calc(100% - 3rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  margin-top: 1.5rem;
+  padding: 1.625rem;
+  border-radius: 5px;
+}
+.header__menu a {
+  display: block;
+  color: #2d314d;
+  padding: 0.625rem;
+  text-align: center;
+}
 .header__links a {
+  position: relative;
   font-size: 0.875rem;
   color: #9698a6;
+  transition: color 200ms ease-in-out;
+  /* 
+  * cree un element qui n'existe pas dans le html
+  * ::before creates a pseudo-element that is the first child of the selected element. 
+  * It is often used to add cosmetic content to an element with the content property. 
+  * It is inline by default.
+  */
 }
 .header__links a:not(:last-child) {
   margin-right: 32px;
 }
-.header__links:hover {
+.header__links a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5px;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  background: linear-gradient(to right, #31d35c, #2d314d);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+.header__links a:hover {
   color: #2d314d;
-  transition: color 200ms ease-in-out;
+}
+.header__links a:hover::before {
+  opacity: 1;
 }
 .header__cta {
   font-size: 0.875rem;
   color: white;
+  transition: opacity 300ms ease-in-out;
+}
+.header__cta:hover {
+  opacity: 0.75;
+}
+.header .overlay {
+  display: none;
+  position: fixed;
+  top: 3.75rem;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #2d314d;
+  background-image: linear-gradient(#2d314d, transparent);
+  opacity: 0.3;
 }
 
 /**
@@ -110,5 +194,16 @@ button, .button {
 * :last-child  represents the last element among a group of sibling elements.
 *not last child css
 */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*@keyframes (=image cle) 
+permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec les transitions.
+ */
 
 /*# sourceMappingURL=style.css.map */

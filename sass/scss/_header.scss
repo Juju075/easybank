@@ -1,10 +1,42 @@
 /** Section */
 .header{
+    
+    // Hamburger Open Styles
+    .open {
 
-    nav{
-        padding: 24px;
+        .overlay{
+            display: block;
+            animation: fade-in 300ms ease-in-out forwards;
+        }
+        //animation fait appel a l'animation fade-in
+
+        .header__menu{
+
+            > span:first-child {
+                transform: rotate(45deg);
+            }
+            
+            > span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            > span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+ 
+ 
     }
+    /** 
+    * Ajoute une animation fade-in a .overlay
+    *Selecteur d'element fils '>' permet de sélectionner les nœuds qui sont des fils directs 
+    *d'un élément donné.
+    */
 
+    nav{ 
+        padding-top: 1.0625rem;
+        padding-bottom: 1.0625rem;
+    }
 
     &__logo{
         img{
@@ -13,46 +45,115 @@
         }
 
     }
+    &__menu{  
 
-
-    &__menu{ 
-
-        > span {
+         >span {
             display: block;
             width:26px;
             height:2px;
             background-color: $darkBlue;
+            transition: color 200ms ease-in-out;
+            transform-origin: 3px 1px;
+
+           //
     
+            //espace
             &:not(:last-child){
                 margin-bottom: 5px;
             }
         }
     }
+    &__menu{ // Background pour le menu
+        position: absolute;
+        width: calc(100% - 3rem);
+        left: 50%; 
+        transform:translateX(-50%);                     
+        background: white;
+        margin-top: 1.5rem;
+        padding:1.625rem;
+        border-radius: 5px;
+
+
+
+
+
+
+
+        a{
+            display: block; // Alignement vertical           
+            color: $darkBlue;
+            padding: 0.625rem;
+
+            text-align: center;
+        }
+
+    } 
+
 
 
     &__links{
+        //border: 1px solid red;
 
+        // position relative
         a{
-        font-size: $font-sm;
-        color: $grayishBlue;
-
-         &:not(:last-child){
-        margin-right: 32px;
-        }
-
-        }
-        &:hover{
-            color: $darkBlue;
+            position: relative;
+            font-size: $font-sm;
+            color: $grayishBlue;
             transition: color 200ms ease-in-out;
-        }
+
+            &:not(:last-child){
+            margin-right: 32px;
+            }
+
+            /* 
+            * cree un element qui n'existe pas dans le html
+            * ::before creates a pseudo-element that is the first child of the selected element. 
+            * It is often used to add cosmetic content to an element with the content property. 
+            * It is inline by default.
+            */
+            &::before{ // cree un pseudo-element pour chaque selecteur associe.
+                content:"";
+                display: block;
+                position: absolute;
+                height: 5px;
+                left: 0;
+                right: 0;
+                bottom: -30px;
+                background: linear-gradient(to right, $limeGreen, $darkBlue);
+                opacity: 0;
+                transition: opacity 300ms ease-in-out;
+            }
+            &:hover{
+                color: $darkBlue;
+
+                &::before{
+                opacity: 1;
+                }
+            }    
+        }       
     }
-    
-        
     &__cta{
         font-size: $font-sm;
         color: white;
+        transition: opacity 300ms ease-in-out;
+
+        &:hover{
+            opacity: 0.75;
+        }
     }
 
+    .overlay{
+        display: none;
+        position: fixed;
+        top: 3.75rem;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: $darkBlue;
+        background-image: linear-gradient($darkBlue, transparent);
+        opacity: 0.3;
+    }
+    /** position */
 }
 
 

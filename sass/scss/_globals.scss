@@ -1,7 +1,6 @@
-
 @import"_mixins.scss";
 
-// markup = balises
+// Markups
 html{
     font-size: 100%;
     box-sizing: border-box;
@@ -29,11 +28,10 @@ body{
 
 a, a:visited, a:hover{
     text-decoration: none;
-    color: $grayishBlue;
+    color: white;
 }
 
-
-/* Attention syntax sass */
+//Displays
 .flex{
     display: flex;
     &-jc-sb{
@@ -62,18 +60,31 @@ button, .button{
 */
 
  
-//Visibility élements
-
+//Elements Visibility Mobile first
 .hide-for-mobile{
-    //hide for mobile and tablet
+    //hide for mobile and tablet button menu
     @include breakpoint-down(medium){
         display: none;
     }
 
 }
 .hide-for-desktop{
+    //hide for desktop  hamburger
     @include breakpoint-up(large){
         display: none;
     }
 
 }
+/** @include Basecode */
+
+//Spacing
+.container{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    }
+ 
+
+ 

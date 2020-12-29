@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300" rel="stylesheet">   
   <link rel="stylesheet" href="sass/style.css">
+  <link rel="stylesheet" href="">
   <title>Frontend Mentor | Easybank landing page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet  -->
@@ -18,28 +18,31 @@
 </head>
 <body>
 
-
   <!-- Section Header -->
   <header class="header">
 
+    <!-- Overlay display menu -->
+    <div class="overlay"></div>
+
  
     <!-- Navbar Container (1 Ligne ) -->
-    <nav class="flex flex-jc-sb flex-ai-c">
+    <nav class="container flex flex-jc-sb flex-ai-c">
 
       <!-- 1 element Logo -->
       <a href="/" class="header__logo">
         <img src="images/logo.svg" alt="Easybank"/>
       </a>
 
-      <!-- <span> element is a generic inline container for phrasing content, which does not inherently represent anything -->
-      <!-- 1 element Hamburger-->  
-      <a href="#" class="header__menu hide-for-desktop">
+    <!-- 1 element Hamburger-->  
+      
+    <!--Ajout d'un id pour pouvoir etre appeler par javascript -->
+      <a id="btnHamburger" href="#" class="header__menu  hide-for-desktop">
         <span></span>
         <span></span>
         <span></span>
       </a>
 
-      <!-- 1 element -->    
+      <!-- 1 element / Affichage conditionnel / Hamburger menu-->    
       <div class="header__links hide-for-mobile">
         <a href="#">Home</a>
         <a href="#">About</a>
@@ -48,11 +51,22 @@
         <a href="#">Careers</a>
       </div>
 
+    <!-- Fin element Hamburger menu --> 
+
       <!-- 1 element Button--> 
       <!-- cta = call to action-->
       <a href="#" class="button header__cta hide-for-mobile">Request Invite</a>
-
     </nav>
+
+    <!-- Nouvelle (ligne) Hamburger menu -->
+    <!-- 1 element -->   
+    <div class="header__menu container">
+     <a href="#" class="">Home</a>
+     <a href="#" class="">About</a>
+     <a href="#" class="">Contact</a>
+     <a href="#" class="">Blog</a>
+     <a href="#" class="">Careers</a>
+    </div>
 
   </header>
 
@@ -135,11 +149,11 @@
   © Easybank. All Rights Reserved -->
   
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    
     Coded by <a href="#">Junior Kheve</a>.
   </div>
 
-<script src="/app/js/script.js"></script>
+<script src="script.js"></script>
 
 
 </body>
