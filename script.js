@@ -3,15 +3,18 @@ const btnHamburger = document.querySelector('#btnHamburger');
 const header = document.querySelector('.header');
 
 //Action
-btnHamburger.addEventListener('click', function(){
+
+ btnHamburger.addEventListener('click', function(){
     console.log('click hamburger');
 
-    if (header.classList.remove('open')){ //Closed hamburger menu
+    if (header.classList.contains('open')){ //Closed hamburger menu       
+        header.classList.remove('open');
     }
     else{
         header.classList.add('open');
     }
-});
+}); 
+
 
 /**
  * const permet de créer une constante nommée accessible uniquement en lecture. 
