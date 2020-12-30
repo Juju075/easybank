@@ -2,7 +2,6 @@
 /*
 *
 */
-/** @mixin name (argument){}*/
 /** mixing name(parametre){ coller bloc code @content contenue d'origine} */
 html {
   font-size: 100%;
@@ -57,6 +56,11 @@ button, .button {
 /* button, .button double selecteur
 * font-weight permet de définir la graisse utilisée pour le texte
 */
+/*
+* Elements à afficher ou non.
+* Affichage ou cacher elements
+* Mobile first
+*/
 @media (max-width: 63.9375em) {
   .hide-for-mobile {
     display: none;
@@ -81,23 +85,35 @@ button, .button {
 .header {
   /** 
   * Ajoute une animation fade-in a .overlay
-  *Selecteur d'element fils '>' permet de sélectionner les nœuds qui sont des fils directs 
-  *d'un élément donné.
+  * Selecteur d'element fils '>' permet de sélectionner les nœuds qui sont des fils directs 
+  * d'un élément donné.
   */
-  /** position */
+  /***
+  */
 }
-.header .open .overlay {
+.header.open .overlay {
   display: block;
   animation: fade-in 300ms ease-in-out forwards;
 }
-.header .open .header__menu > span:first-child {
+.header.open .header__toogle > span:first-child {
   transform: rotate(45deg);
 }
-.header .open .header__menu > span:nth-child(2) {
+.header.open .header__toogle > span:nth-child(2) {
   opacity: 0;
 }
-.header .open .header__menu > span:last-child {
+.header.open .header__toogle > span:last-child {
   transform: rotate(-45deg);
+}
+.header .overlay {
+  display: none;
+  position: fixed;
+  top: 3.75rem;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #2d314d;
+  background-image: linear-gradient(#2d314d, transparent);
+  opacity: 0.3;
 }
 .header nav {
   padding-top: 1.0625rem;
@@ -107,7 +123,7 @@ button, .button {
   width: 8.8125rem;
   height: 1.375rem;
 }
-.header__menu > span {
+.header__toogle > span {
   display: block;
   width: 26px;
   height: 2px;
@@ -115,7 +131,7 @@ button, .button {
   transition: color 200ms ease-in-out;
   transform-origin: 3px 1px;
 }
-.header__menu > span:not(:last-child) {
+.header__toogle > span:not(:last-child) {
   margin-bottom: 5px;
 }
 .header__menu {
@@ -174,17 +190,6 @@ button, .button {
 }
 .header__cta:hover {
   opacity: 0.75;
-}
-.header .overlay {
-  display: none;
-  position: fixed;
-  top: 3.75rem;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-color: #2d314d;
-  background-image: linear-gradient(#2d314d, transparent);
-  opacity: 0.3;
 }
 
 /**

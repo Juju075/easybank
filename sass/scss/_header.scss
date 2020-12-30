@@ -2,15 +2,16 @@
 .header{
     
     // Hamburger Open Styles
-    .open {
+    &.open {
+        
 
-        .overlay{
+        .overlay {
             display: block;
             animation: fade-in 300ms ease-in-out forwards;
         }
-        //animation fait appel a l'animation fade-in
+        //execute l'animation fade-in
 
-        .header__menu{
+        .header__toogle {
 
             > span:first-child {
                 transform: rotate(45deg);
@@ -29,8 +30,21 @@
     }
     /** 
     * Ajoute une animation fade-in a .overlay
-    *Selecteur d'element fils '>' permet de sélectionner les nœuds qui sont des fils directs 
-    *d'un élément donné.
+    * Selecteur d'element fils '>' permet de sélectionner les nœuds qui sont des fils directs 
+    * d'un élément donné.
+    */
+    .overlay{
+        display: none;
+        position: fixed;
+        top: 3.75rem;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: $darkBlue;
+        background-image: linear-gradient($darkBlue, transparent);
+        opacity: 0.3;
+    }
+    /***
     */
 
     nav{ 
@@ -45,7 +59,7 @@
         }
 
     }
-    &__menu{  
+    &__toogle {  //Mobile Menu toogle
 
          >span {
             display: block;
@@ -142,18 +156,8 @@
         }
     }
 
-    .overlay{
-        display: none;
-        position: fixed;
-        top: 3.75rem;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: $darkBlue;
-        background-image: linear-gradient($darkBlue, transparent);
-        opacity: 0.3;
-    }
-    /** position */
+
+
 }
 
 

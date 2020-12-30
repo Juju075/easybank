@@ -59,7 +59,13 @@ button, .button{
 * font-weight permet de définir la graisse utilisée pour le texte
 */
 
- 
+/*
+* Elements à afficher ou non.
+* Affichage ou cacher elements
+* Mobile first
+*/ 
+
+//Include Media Queries
 //Elements Visibility Mobile first
 .hide-for-mobile{
     //hide for mobile and tablet button menu
