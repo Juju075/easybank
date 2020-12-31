@@ -105,13 +105,11 @@ button, .button {
   transform: rotate(-45deg);
 }
 .header .overlay {
-  display: none;
   position: fixed;
   top: 3.75rem;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  background-color: #2d314d;
   background-image: linear-gradient(#2d314d, transparent);
   opacity: 0.3;
 }
@@ -138,10 +136,10 @@ button, .button {
   position: absolute;
   width: calc(100% - 3rem);
   left: 50%;
-  transform: translateX(-50%);
-  background: white;
   margin-top: 1.5rem;
   padding: 1.625rem;
+  background: white;
+  transform: translateX(-50%);
   border-radius: 5px;
 }
 .header__menu a {
@@ -199,16 +197,43 @@ button, .button {
 * :last-child  represents the last element among a group of sibling elements.
 *not last child css
 */
+.has-fade {
+  visibility: hidden;
+}
+
 @keyframes fade-in {
   from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
     opacity: 0;
   }
   to {
+    visibility: visible;
     opacity: 1;
   }
 }
 /*@keyframes (=image cle) 
 permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec les transitions.
  */
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-out 300ms ease-in-out forwards;
+}
 
 /*# sourceMappingURL=style.css.map */

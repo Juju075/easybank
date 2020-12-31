@@ -1,19 +1,33 @@
-//Déclaration
+//Déclarations
 const btnHamburger = document.querySelector('#btnHamburger');
 const header = document.querySelector('.header');
+const overlay = document.querySelector('.overlay');
+const fadeElems = document.querySelectorAll('.has-fade');
 
-//Action
+//has fade dans overlay et menu mobile
 
+//Action au clic
  btnHamburger.addEventListener('click', function(){
-    console.log('click hamburger');
+        console.log('click hamburger');
 
-    if (header.classList.contains('open')){ //Closed hamburger menu       
-        header.classList.remove('open');
+        if (header.classList.contains('open')){  //Close hamubrger  
+
+            header.classList.remove('open');
+
+            fadeElems.forEach(function(element){
+                element.classList.remove('fade-in');
+                element.classList.add('fade-out');          
+        });
+        }
+        else {           
+            header.classList.add('open');
+            
+            fadeElems.forEach(function(element){ //Open hamburger
+                element.classList.remove('fade-out');
+                element.classList.add('fade-in');
+        });
     }
-    else{
-        header.classList.add('open');
-    }
-}); 
+});
 
 
 /**
@@ -34,4 +48,6 @@ const header = document.querySelector('.header');
  * 
  * element.classlist.remove()  method removes the element at the specified index from 
  * the options collection for this select element.
+ * 
+ * forEach() permet d'exécuter une fonction donnée sur chaque élément du tableau.
  */

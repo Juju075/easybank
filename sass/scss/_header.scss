@@ -4,7 +4,6 @@
     // Hamburger Open Styles
     &.open {
         
-
         .overlay {
             display: block;
             animation: fade-in 300ms ease-in-out forwards;
@@ -34,13 +33,11 @@
     * d'un élément donné.
     */
     .overlay{
-        display: none;
         position: fixed;
         top: 3.75rem;
         right: 0px;
         bottom: 0px;
         left: 0px;
-        background-color: $darkBlue;
         background-image: linear-gradient($darkBlue, transparent);
         opacity: 0.3;
     }
@@ -81,30 +78,21 @@
         position: absolute;
         width: calc(100% - 3rem);
         left: 50%; 
-        transform:translateX(-50%);                     
-        background: white;
         margin-top: 1.5rem;
         padding:1.625rem;
+        background: white;
+        transform:translateX(-50%);                     
         border-radius: 5px;
-
-
-
-
-
-
+        
+        //transform:translateX(
 
         a{
             display: block; // Alignement vertical           
             color: $darkBlue;
             padding: 0.625rem;
-
             text-align: center;
         }
-
-    } 
-
-
-
+    }
     &__links{
         //border: 1px solid red;
 
@@ -155,12 +143,7 @@
             opacity: 0.75;
         }
     }
-
-
-
 }
-
-
 /**
 * padding the padding area on all four sides of an element at once.
 * > Combinateur fils element direct
