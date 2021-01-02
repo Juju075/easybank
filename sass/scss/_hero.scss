@@ -1,6 +1,9 @@
 .hero{
-    @include breakpoint-up(large){ // for desktop
+    //Breakpoint Desktop
+    @include breakpoint-up(large){ // Breakpoint desktop
+        min-height: 41rem;
         display: flex;
+        align-items: center;
     }
     /** flex  capacité d'un élément flexible à modifier 
     *ses dimensions afin de remplir l'espace disponible 
@@ -15,9 +18,13 @@
         background-position: center center; //sets the initial position for each background image.
         min-height: 17.5em;
 
-        @include breakpoint-up(large){
-            flex: 1;
+        //Breakpoint Desktop
+        @include breakpoint-up(large){ //Chng order          
+            flex: 3; // flex grow
             order: 2;
+            height: 41rem; // Agrandi l'image
+            background-image: url('/images/bg-intro-desktop.svg');
+            background-position: left center;
         }
         /** flex grow (1) 
         */
@@ -53,8 +60,9 @@
             line-height: 1.5;
             margin-bottom: 2.25rem;
         }
-        @include breakpoint-up(large){
-            flex: 1;
+        //Breakpoint Desktop
+        @include breakpoint-up(large){ // Chnge order
+            flex: 2;
             order: 1;
         }        
     }

@@ -53,7 +53,7 @@ a, a:visited, a:hover{
 
 //Buttons
 button, .button{
-    display: inline-block;
+    display: inline-block;// pour eviter block par defaut
     padding: 0.875rem 2.1875rem;
     background: linear-gradient(to right, $limeGreen, $brightCyan);
     border-radius: 50px;
