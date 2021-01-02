@@ -1,9 +1,13 @@
 .hero{
+    background-color: $veryLightGray;
     //Breakpoint Desktop
-    @include breakpoint-up(large){ // Breakpoint desktop
-        min-height: 41rem;
-        display: flex;
-        align-items: center;
+    .container{
+        @include breakpoint-up(large){ // Breakpoint desktop
+            min-height: 41rem;
+            display: flex;
+            align-items: center;
+        }
+
     }
     /** flex  capacité d'un élément flexible à modifier 
     *ses dimensions afin de remplir l'espace disponible 
@@ -54,16 +58,24 @@
             line-height: 1.15; // used to set the distance between lines of text.
             color: $darkBlue;
             font-size: 2.31rem;  
-            margin-bottom: 1.5rem;        
+            margin-bottom: 1.5rem;  
+
+            @include breakpoint-up(large){ // Modification de h1 si nouveau breakpoint
+                font-size: $font-xlg;  
+             } 
         }
         p{
             line-height: 1.5;
             margin-bottom: 2.25rem;
+            @include breakpoint-up(large){ // Modification de p si nouveau breakpoint
+                font-size: $font-med;
+            } 
         }
         //Breakpoint Desktop
         @include breakpoint-up(large){ // Chnge order
             flex: 2;
             order: 1;
+            text-align: left;
         }        
     }
 }

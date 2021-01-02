@@ -40,6 +40,8 @@ a, a:visited, a:hover{
 //Displays
 .flex{
     display: flex;
+    
+    //Hyperclass
     &-jc-sb{
     justify-content: space-between;
     }
