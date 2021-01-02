@@ -2,9 +2,6 @@
     visibility: hidden;
 }
 
-
-
-
 @keyframes fade-in {
     from{
         visibility: hidden;
@@ -20,6 +17,10 @@
         opacity: 1;
     }
 }
+.fade-in{
+     animation: fade-in 200ms ease-in-out forwards;   
+}
+
 /*@keyframes (=image cle) 
 permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec les transitions.
  */
@@ -38,5 +39,5 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
     }
 }
 .fade-out{
-    animation: fade-out 300ms ease-in-out forwards;
+    animation: fade-out 200ms ease-in-out forwards;
 }

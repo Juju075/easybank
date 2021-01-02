@@ -22,9 +22,15 @@ body{
     font-size: $font-med;
     color: $grayishBlue;
     line-height: 1.3;
+
+    &.noscroll{
+        overflow: hidden;
+    }
     
 }
-/* line-height définit la hauteur de la boîte d'une ligne espace entre ligne. */
+h1,h2,h3{
+    margin-top: 0px;
+} 
 
 a, a:visited, a:hover{
     text-decoration: none;
@@ -47,13 +53,20 @@ a, a:visited, a:hover{
 
 //Buttons
 button, .button{
-    padding:0.875rem 2.1875rem;
-    background: linear-gradient(to right, $limeGreen, $darkBlue);
+    display: inline-block;
+    padding: 0.875rem 2.1875rem;
+    background: linear-gradient(to right, $limeGreen, $brightCyan);
     border-radius: 50px;
     border: 0;
     cursor: pointer;
     color: white;
     font-weight: 700;
+    font-size: $font-sm;
+    transition: opacity 300ms ease-in-out;
+
+    &:hover{
+            opacity: 0.75;
+        }
 }
 /* button, .button double selecteur
 * font-weight permet de définir la graisse utilisée pour le texte
@@ -85,10 +98,10 @@ button, .button{
 
 //Spacing
 .container{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 2.25rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    padding-bottom: 2.25rem;
 
     }
  

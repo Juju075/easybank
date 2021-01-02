@@ -23,8 +23,14 @@ body {
   color: #9698a6;
   line-height: 1.3;
 }
+body.noscroll {
+  overflow: hidden;
+}
 
-/* line-height définit la hauteur de la boîte d'une ligne espace entre ligne. */
+h1, h2, h3 {
+  margin-top: 0px;
+}
+
 a, a:visited, a:hover {
   text-decoration: none;
   color: white;
@@ -44,13 +50,19 @@ a, a:visited, a:hover {
 }
 
 button, .button {
+  display: inline-block;
   padding: 0.875rem 2.1875rem;
-  background: linear-gradient(to right, #31d35c, #2d314d);
+  background: linear-gradient(to right, #31d35c, #2bb7da);
   border-radius: 50px;
   border: 0;
   cursor: pointer;
   color: white;
   font-weight: 700;
+  font-size: 0.875rem;
+  transition: opacity 300ms ease-in-out;
+}
+button:hover, .button:hover {
+  opacity: 0.75;
 }
 
 /* button, .button double selecteur
@@ -75,10 +87,10 @@ button, .button {
 
 /** @include Basecode */
 .container {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 2.25rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  padding-bottom: 2.25rem;
 }
 
 /** Section */
@@ -181,14 +193,6 @@ button, .button {
 .header__links a:hover::before {
   opacity: 1;
 }
-.header__cta {
-  font-size: 0.875rem;
-  color: white;
-  transition: opacity 300ms ease-in-out;
-}
-.header__cta:hover {
-  opacity: 0.75;
-}
 
 /**
 * padding the padding area on all four sides of an element at once.
@@ -215,6 +219,10 @@ button, .button {
     opacity: 1;
   }
 }
+.fade-in {
+  animation: fade-in 200ms ease-in-out forwards;
+}
+
 /*@keyframes (=image cle) 
 permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec les transitions.
  */
@@ -233,7 +241,69 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
   }
 }
 .fade-out {
-  animation: fade-out 300ms ease-in-out forwards;
+  animation: fade-out 200ms ease-in-out forwards;
+}
+
+.hero {
+  /** flex  capacité d'un élément flexible à modifier 
+  *ses dimensions afin de remplir l'espace disponible 
+  *de son conteneur.
+  */
+  /**
+  *transform defines a list of transform definitions that are applied to an element 
+  *and the element's children.
+  */
+}
+@media (min-width: 64em) {
+  .hero {
+    display: flex;
+  }
+}
+.hero__image {
+  /* border: 1px solid magenta; */
+  position: relative;
+  background-image: url("/images/bg-intro-mobile.svg");
+  background-size: cover;
+  background-position: center center;
+  min-height: 17.5em;
+  /** flex grow (1) 
+  */
+}
+@media (min-width: 64em) {
+  .hero__image {
+    flex: 1;
+    order: 2;
+  }
+}
+.hero__image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/image-mockups.png");
+  background-size: 93%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.hero__text {
+  text-align: center;
+}
+.hero__text h1 {
+  font-weight: 300;
+  line-height: 1.15;
+  color: #2d314d;
+  font-size: 2.31rem;
+  margin-bottom: 1.5rem;
+}
+.hero__text p {
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+@media (min-width: 64em) {
+  .hero__text {
+    flex: 1;
+    order: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

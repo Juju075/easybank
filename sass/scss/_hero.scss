@@ -1,0 +1,61 @@
+.hero{
+    @include breakpoint-up(large){ // for desktop
+        display: flex;
+    }
+    /** flex  capacité d'un élément flexible à modifier 
+    *ses dimensions afin de remplir l'espace disponible 
+    *de son conteneur.
+    */
+    
+    &__image{
+        /* border: 1px solid magenta; */
+        position: relative;
+        background-image: url('/images/bg-intro-mobile.svg');
+        background-size: cover; // couvre tous l'espace dispo
+        background-position: center center; //sets the initial position for each background image.
+        min-height: 17.5em;
+
+        @include breakpoint-up(large){
+            flex: 1;
+            order: 2;
+        }
+        /** flex grow (1) 
+        */
+
+        &::before{
+            content: ""; //content sinon n'apparait pas dans la page.
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('/images/image-mockups.png');
+            background-size: 93%;
+            background-repeat: no-repeat;
+            background-position: center bottom ;
+
+        }
+    }
+    /**
+    *transform defines a list of transform definitions that are applied to an element 
+    *and the element's children.
+    */
+    //
+    &__text{
+        text-align: center; // centrer
+
+        h1{
+            font-weight: 300;
+            line-height: 1.15; // used to set the distance between lines of text.
+            color: $darkBlue;
+            font-size: 2.31rem;  
+            margin-bottom: 1.5rem;        
+        }
+        p{
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+        @include breakpoint-up(large){
+            flex: 1;
+            order: 1;
+        }        
+    }
+}

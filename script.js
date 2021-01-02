@@ -1,10 +1,11 @@
 //Déclarations
 const btnHamburger = document.querySelector('#btnHamburger');
 const header = document.querySelector('.header');
-const overlay = document.querySelector('.overlay');
-const fadeElems = document.querySelectorAll('.has-fade');
+const overlay = document.querySelector('.overlay'); // 2 emplacements
+const fadeElems = document.querySelectorAll('.has-fade'); // 3 emplacements
 
 //has fade dans overlay et menu mobile
+ 
 
 //Action au clic
  btnHamburger.addEventListener('click', function(){
@@ -49,5 +50,9 @@ const fadeElems = document.querySelectorAll('.has-fade');
  * element.classlist.remove()  method removes the element at the specified index from 
  * the options collection for this select element.
  * 
- * forEach() permet d'exécuter une fonction donnée sur chaque élément du tableau.
+ * querySelectorAll() returns a static (not live) 
+ * NodeList representing a list of the document's elements that match the specified 
+ * group of selectors.
+ * 
+ * forEach(function()) permet d'exécuter une fonction donnée sur chaque élément du tableau.
  */
