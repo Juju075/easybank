@@ -297,7 +297,7 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
 }
 .hero__text p {
   line-height: 1.5;
-  margin-bottom: 0;
+  margin-bottom: 2.25rem;
 }
 @media (min-width: 64em) {
   .hero__text {
