@@ -20,11 +20,19 @@
         position: relative;
         background-image: url('/images/bg-intro-mobile.svg');
         background-size: cover; // couvre tous l'espace dispo
+        background-repeat: no-repeat;
         background-position: center center; //sets the initial position for each background image.
         min-height: 17.5em;
 
+
+        //Breakpoint Tablet
+        @include breakpoint-up(medium){ 
+            min-height: 25rem; 
+            background-position: center  60%;
+        }
+
         //Breakpoint Desktop
-        @include breakpoint-up(large){ //Chng order          
+        @include breakpoint-up(large){           
             flex: 3; // flex grow
             order: 2;
             height: 41rem; // Agrandi l'image
@@ -46,6 +54,8 @@
             background-repeat: no-repeat;
             background-position: center bottom ;
 
+
+
             //Breakpoint Desktop
             @include breakpoint-up(large){  
                 width: 150%;
@@ -65,7 +75,11 @@
             background-size: 93%;
             background-repeat: no-repeat;
             background-position: center bottom; // Initial Position
-       
+
+            //Breakpoint Tablet
+             @include breakpoint-up(medium){ 
+                background-size: 52%;
+            }
             @include breakpoint-up(large){  
                 width: 120%;
                 height: 122%;

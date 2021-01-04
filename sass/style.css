@@ -286,8 +286,15 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
   position: relative;
   background-image: url("/images/bg-intro-mobile.svg");
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center center;
   min-height: 17.5em;
+}
+@media (min-width: 40em) {
+  .hero__image {
+    min-height: 25rem;
+    background-position: center 60%;
+  }
 }
 @media (min-width: 64em) {
   .hero__image {
@@ -328,6 +335,11 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
   background-size: 93%;
   background-repeat: no-repeat;
   background-position: center bottom;
+}
+@media (min-width: 40em) {
+  .hero__image::after {
+    background-size: 52%;
+  }
 }
 @media (min-width: 64em) {
   .hero__image::after {
