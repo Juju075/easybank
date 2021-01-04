@@ -1,5 +1,6 @@
 .hero{
-    background-color: $veryLightGray;
+    background-color: $veryLightGray;  
+    
     //Breakpoint Desktop
     .container{
         @include breakpoint-up(large){ // Breakpoint desktop
@@ -27,21 +28,54 @@
             flex: 3; // flex grow
             order: 2;
             height: 41rem; // Agrandi l'image
-            background-image: url('/images/bg-intro-desktop.svg');
-            background-position: left center;
+            background-image: none;
+            /* background-image: url('/images/bg-intro-desktop.svg'); */
+            /* background-position: left center; */
         }
-        /** flex grow (1) 
-        */
+        &::before, ::after{
+            border: 1px solid magenta;
+        }
 
-        &::before{
+        &::before{ //Background
             content: ""; //content sinon n'apparait pas dans la page.
             position: absolute;
             width: 100%;
             height: 100%;
-            background-image: url('/images/image-mockups.png');
+            background-image: url('/images/bg-intro-desktop.svg');
             background-size: 93%;
             background-repeat: no-repeat;
             background-position: center bottom ;
+
+            //Breakpoint Desktop
+            @include breakpoint-up(large){  
+                width: 150%;
+                box-sizing: 122%;
+                background-position: 0% 83%;
+            }
+
+        }
+        &::after{ //Image premier plan phone
+            content: "";  
+            position: absolute;
+            //Taille image
+            width: 100%;
+            height: 100%;
+
+            background-image: url('/images/image-mockups.png');
+            background-size: 93%;
+            background-repeat: no-repeat;
+            background-position: center bottom; // Initial Position
+       
+            @include breakpoint-up(large){  
+                width: 120%;
+                height: 122%;
+
+                background-size: 94%;
+                background-position: center 150%; // Initial Position
+                //Positionning
+                top: 0%;
+                left: 22%;
+            }
 
         }
     }
@@ -68,7 +102,7 @@
             line-height: 1.5;
             margin-bottom: 2.25rem;
             @include breakpoint-up(large){ // Modification de p si nouveau breakpoint
-                font-size: $font-med;
+            font-size: $font-med;
             } 
         }
         //Breakpoint Desktop

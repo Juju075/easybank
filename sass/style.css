@@ -68,11 +68,6 @@ button:hover, .button:hover {
 /* button, .button double selecteur
 * font-weight permet de définir la graisse utilisée pour le texte
 */
-/*
-* Elements à afficher ou non.
-* Affichage ou cacher elements
-* Mobile first
-*/
 @media (max-width: 63.9375em) {
   .hide-for-mobile {
     display: none;
@@ -293,19 +288,38 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
   background-size: cover;
   background-position: center center;
   min-height: 17.5em;
-  /** flex grow (1) 
-  */
 }
 @media (min-width: 64em) {
   .hero__image {
     flex: 3;
     order: 2;
     height: 41rem;
-    background-image: url("/images/bg-intro-desktop.svg");
-    background-position: left center;
+    background-image: none;
+    /* background-image: url('/images/bg-intro-desktop.svg'); */
+    /* background-position: left center; */
   }
 }
+.hero__image::before, .hero__image ::after {
+  border: 1px solid magenta;
+}
 .hero__image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/bg-intro-desktop.svg");
+  background-size: 93%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+@media (min-width: 64em) {
+  .hero__image::before {
+    width: 150%;
+    box-sizing: 122%;
+    background-position: 0% 83%;
+  }
+}
+.hero__image::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -314,6 +328,16 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
   background-size: 93%;
   background-repeat: no-repeat;
   background-position: center bottom;
+}
+@media (min-width: 64em) {
+  .hero__image::after {
+    width: 120%;
+    height: 122%;
+    background-size: 94%;
+    background-position: center 150%;
+    top: 0%;
+    left: 22%;
+  }
 }
 .hero__text {
   text-align: center;

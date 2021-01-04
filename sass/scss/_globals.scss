@@ -40,7 +40,7 @@ a, a:visited, a:hover{
 //Displays
 .flex{
     display: flex;
-    
+
     //Hyperclass
     &-jc-sb{
     justify-content: space-between;
@@ -74,11 +74,7 @@ button, .button{
 * font-weight permet de définir la graisse utilisée pour le texte
 */
 
-/*
-* Elements à afficher ou non.
-* Affichage ou cacher elements
-* Mobile first
-*/ 
+
 
 //Include Media Queries
 //Elements Visibility Mobile first
@@ -111,11 +107,11 @@ button, .button{
             padding-left: 1.5rem;
             padding-right: 1.5rem;
         }
-        &--py{
+        &--py{ // Vertical
             padding-top: 2.25rem;
             padding-bottom: 2.25rem;
         }
-        &--px{
+        &--px{ //Horizontal
             padding-left: 1.5rem;
             padding-right: 1.5rem;
         }
