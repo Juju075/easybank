@@ -22,6 +22,7 @@ body {
   font-size: 1.125rem;
   color: #9698a6;
   line-height: 1.3;
+  min-height: 300vh;
 }
 body.noscroll {
   overflow: hidden;
@@ -29,6 +30,30 @@ body.noscroll {
 
 h1, h2, h3 {
   margin-top: 0px;
+  font-weight: 300;
+  line-height: 1.15;
+  color: #2d314d;
+  font-size: 2.31rem;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 64em) {
+  h1 {
+    font-size: 3.25rem;
+  }
+}
+
+h2 {
+  font-size: 1.875rem;
+  margin-bottom: 2.25rem;
+}
+@media (min-width: 64em) {
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
 }
 
 a, a:visited, a:hover {
@@ -86,21 +111,21 @@ button:hover, .button:hover {
   margin: auto;
 }
 .container--pall {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 .container--py {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
+  padding-top: 4.375rem;
+  padding-bottom: 4.375remm;
 }
 .container--px {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 .container--pt {
-  padding-top: 2.25rem;
+  padding-top: 4.375rem;
 }
 .container--pl {
   padding-left: 1.5rem;
@@ -109,7 +134,7 @@ button:hover, .button:hover {
   padding-right: 1.5rem;
 }
 .container--pb {
-  padding-bottom: 2.25rem;
+  padding-bottom: 4.375rem;
 }
 
 /** Section */
@@ -289,6 +314,9 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 17.5em;
+  /*         &::before, ::after{
+              border: 1px solid magenta;
+          } */
 }
 @media (min-width: 40em) {
   .hero__image {
@@ -305,9 +333,6 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
     /* background-image: url('/images/bg-intro-desktop.svg'); */
     /* background-position: left center; */
   }
-}
-.hero__image::before, .hero__image ::after {
-  border: 1px solid magenta;
 }
 .hero__image::before {
   content: "";
@@ -354,15 +379,10 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
 .hero__text {
   text-align: center;
 }
-.hero__text h1 {
-  font-weight: 300;
-  line-height: 1.15;
-  color: #2d314d;
-  font-size: 2.31rem;
-  margin-bottom: 1.5rem;
-}
 @media (min-width: 64em) {
-  .hero__text h1 {
+  .hero__text {
+    flex: 2;
+    order: 1;
     font-size: 3.25rem;
   }
 }
@@ -381,6 +401,66 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
     order: 1;
     text-align: left;
   }
+}
+
+.feature {
+  background-color: #f3f4f6;
+}
+@media (min-width: 64em) {
+  .feature__intro {
+    width: 60%;
+    margin-bottom: 3.75rem;
+  }
+}
+@media (min-width: 40em) {
+  .feature__flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 64em) {
+  .feature__flex {
+    display: flex;
+  }
+}
+.feature__item {
+  /* border:1px solid magenta; */
+  padding: 0.9375rem;
+}
+@media (min-width: 40em) {
+  .feature__item {
+    flex: 0 0 50%;
+  }
+}
+@media (min-width: 64em) {
+  .feature__item {
+    flex: 1;
+  }
+}
+.feature__icon {
+  margin-bottom: 1.875rem;
+}
+@media (min-width: 64em) {
+  .feature__icon {
+    margin-bottom: 2.75rem;
+  }
+}
+.feature__title {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.15;
+  color: darkblue;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 64em) {
+  .feature__title {
+    font-size: 1.5rem;
+    margin-bottom: 2.15rem;
+  }
+}
+.feature__description {
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=style.css.map */

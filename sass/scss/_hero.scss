@@ -40,9 +40,9 @@
             /* background-image: url('/images/bg-intro-desktop.svg'); */
             /* background-position: left center; */
         }
-        &::before, ::after{
+/*         &::before, ::after{
             border: 1px solid magenta;
-        }
+        } */
 
         &::before{ //Background
             content: ""; //content sinon n'apparait pas dans la page.
@@ -101,20 +101,16 @@
     &__text{
         text-align: center; // centrer
 
-        h1{
-            font-weight: 300;
-            line-height: 1.15; // used to set the distance between lines of text.
-            color: $darkBlue;
-            font-size: 2.31rem;  
-            margin-bottom: 1.5rem;  
+        @include breakpoint-up(large){ // Modification de h1 si nouveau breakpoint
+            flex:2;
+            order:1;
+            font-size: $font-xlg;  
+            } 
 
-            @include breakpoint-up(large){ // Modification de h1 si nouveau breakpoint
-                font-size: $font-xlg;  
-             } 
-        }
         p{
             line-height: 1.5;
             margin-bottom: 2.25rem;
+            
             @include breakpoint-up(large){ // Modification de p si nouveau breakpoint
             font-size: $font-med;
             } 
