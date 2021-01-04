@@ -124,14 +124,24 @@ button, .button{
     
     //Hyperclass
         &--pall{
-            padding-top: 4.375rem;
+            padding-top: 4.375rem; // 70px
             padding-bottom: 4.375rem;
             padding-left: 1.5rem;
             padding-right: 1.5rem;
+
+            @include breakpoint-up(large){
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+            }
         }
         &--py{ // Vertical
             padding-top: 4.375rem;
             padding-bottom: 4.375remm;
+
+            @include breakpoint-up(large){
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+            }
         }
         &--px{ //Horizontal
             padding-left: 1.5rem;
@@ -139,6 +149,10 @@ button, .button{
         }
         &--pt{
             padding-top: 4.375rem;
+            
+            @include breakpoint-up(large){
+            padding-top: 6rem;
+            }
         }
         &--pl{
             padding-left: 1.5rem;
@@ -148,6 +162,10 @@ button, .button{
         }
         &--pb{
             padding-bottom: 4.375rem;
+            
+            @include breakpoint-up(large){
+            padding-bottom: 6rem;
+            }
         }
     }
  
