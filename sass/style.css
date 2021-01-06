@@ -561,6 +561,17 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
   padding: 2.5rem;
   text-align: center;
 }
+@media (min-width: 64em) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "logo links1 links2 cta" "social links1 links2 copyright";
+    /** specifies named grid areas, establishing the 
+    *cells in the grid and assigning them names.
+    */
+  }
+}
 .footer a {
   color: white;
 }
@@ -568,11 +579,21 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
   display: inline-block;
   margin-bottom: 1.875rem;
 }
+@media (min-width: 64em) {
+  .footer__logo {
+    grid-area: logo;
+  }
+}
 .footer__social {
   margin-bottom: 1.875rem;
   /* :not() CSS pseudo-class represents 
   elements that do not match a list of selectors
   */
+}
+@media (min-width: 64em) {
+  .footer__social {
+    grid-area: social;
+  }
 }
 .footer__social a {
   display: inline-block;
@@ -583,13 +604,37 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
 .footer__links {
   display: flex;
   flex-direction: column;
-  color: black;
+  align-items: center;
+  font-size: 0.9375rem;
+}
+@media (min-width: 64em) {
+  .footer__links.col1 {
+    grid-area: links1;
+  }
 }
 .footer__links.col2 {
   margin-bottom: 1.875rem;
 }
+@media (min-width: 64em) {
+  .footer__links.col2 {
+    grid-area: links2;
+  }
+}
+.footer__links a {
+  line-height: 2.25;
+}
+@media (min-width: 64em) {
+  .footer__cta {
+    grid-area: cta;
+  }
+}
 .footer__cta a.button {
   margin-bottom: 1.875rem;
+}
+@media (min-width: 64em) {
+  .footer__copyright {
+    grid-area: copyright;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

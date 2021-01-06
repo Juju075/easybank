@@ -3,16 +3,41 @@
     color: white;
     padding: 2.5rem;
     text-align: center;
+
+    @include breakpoint-up(large){ //Container
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) 2fr;
+        // repeat 3 col de 1fr et last col de 2
+        grid-template-rows: repeat(2, 1fr);
+        //add 2 rows
+        grid-template-areas: 
+        "logo links1 links2 cta"
+        "social links1 links2 copyright";
+        /** specifies named grid areas, establishing the 
+        *cells in the grid and assigning them names.
+        */
+    }
     a{
         color: white;
     }
+
     &__logo{
         display: inline-block;
         margin-bottom: 1.875rem;
+
+        @include breakpoint-up(large){
+            grid-area: logo;
+        }
         
     }
+
     &__social{
+        @include breakpoint-up(large){
+        grid-area: social;
+        }
+
         margin-bottom: 1.875rem;
+
         a{
 
             display: inline-block;
@@ -23,26 +48,53 @@
         /* :not() CSS pseudo-class represents 
         elements that do not match a list of selectors
         */
+
     }
+
     &__links{
         display:flex;
-        flex-direction: column; //align en bloc
-        color: black;
+        flex-direction: column; //align en bloc         
+        align-items: center;
+        font-size: 0.9375rem;
         //Pourquoi pas display block ?
+
         &.col1{
+
+        @include breakpoint-up(large){
+            grid-area: links1;
+        }
             
             
         } // class dans un &
         &.col2{
+          @include breakpoint-up(large){
+            grid-area: links2;
+            }   
+
             margin-bottom: 1.875rem;
 
         }
+        a{
+            line-height: 2.25;
+        }
     }
+
     &__cta{
+        @include breakpoint-up(large){
+            grid-area: cta;
+        }
+
         a.button{
             margin-bottom: 1.875rem;
         }
 
+
+    }
+
+    &__copyright{
+      @include breakpoint-up(large){
+      grid-area: copyright;
+    }
     }
 
 } 
