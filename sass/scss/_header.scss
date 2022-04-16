@@ -1,139 +1,137 @@
 /** Section */
-.header{
-    
-    // Hamburger Open Styles
-    &.open {
-        
-        .overlay {
-            display: block;
-            animation: fade-in 300ms ease-in-out forwards;
-        }
-        //execute l'animation fade-in
-
-        .header__toogle {
-
-            > span:first-child {
-                transform: rotate(45deg);
-            }
-            
-            > span:nth-child(2) {
-                opacity: 0;
-            }
-            
-            > span:last-child {
-                transform: rotate(-45deg);
-            }
-        }
- 
- 
+.header {
+  // Hamburger Open Styles
+  &.open {
+    .overlay {
+      display: block;
+      animation: fade-in 300ms ease-in-out forwards;
     }
-    /** 
+    //execute l'animation fade-in
+
+    //Hamburger
+    .header__toogle {
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+
+      > span:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  /** 
     * Ajoute une animation fade-in a .overlay
     * Selecteur d'element fils '>' permet de sélectionner les nœuds qui sont des fils directs 
     * d'un élément donné.
     */
-    .overlay{
-        position: fixed;
-        top: 3.75rem;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-image: linear-gradient($darkBlue, transparent);
-        opacity: 0.3;
-    }
-    /***
+  .overlay {
+    position: fixed;
+    top: 3.75rem;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: linear-gradient($darkBlue, transparent);
+    opacity: 0.3;
+  }
+  /***
     */
 
-    nav{ 
-        padding-top: 1.0625rem;
-        padding-bottom: 1.0625rem;
+  nav {
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
+  }
+
+  &__logo {
+    img {
+      width: 8.8125rem;
+      height: 1.375rem;
     }
+  }
+  &__toogle {
+    //Mobile Menu toogle
 
-    &__logo{
-        img{
-            width: 8.8125rem;
-            height: 1.375rem;
-        }
+    > span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background-color: $darkBlue;
+      transition: color 200ms ease-in-out;
+      transform-origin: 3px 1px;
 
+      //
+
+      //espace
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
     }
-    &__toogle {  //Mobile Menu toogle
+  }
+  &__menu {
+    // Background pour le menu
+    position: absolute;
+    width: calc(100% - 3rem);
+    left: 50%;
+    margin-top: 1.5rem;
+    padding: 1.625rem;
+    background: white;
+    transform: translateX(-50%);
+    border-radius: 5px;
 
-         >span {
-            display: block;
-            width:26px;
-            height:2px;
-            background-color: $darkBlue;
-            transition: color 200ms ease-in-out;
-            transform-origin: 3px 1px;
+    //transform:translateX(
 
-           //
-    
-            //espace
-            &:not(:last-child){
-                margin-bottom: 5px;
-            }
-        }
+    a {
+      display: block; // Alignement vertical
+      color: $darkBlue;
+      padding: 0.625rem;
+      text-align: center;
     }
-    &__menu{ // Background pour le menu
-        position: absolute;
-        width: calc(100% - 3rem);
-        left: 50%; 
-        margin-top: 1.5rem;
-        padding:1.625rem;
-        background: white;
-        transform:translateX(-50%);                     
-        border-radius: 5px;
-        
-        //transform:translateX(
+  }
+  &__links {
+    //border: 1px solid red;
 
-        a{
-            display: block; // Alignement vertical           
-            color: $darkBlue;
-            padding: 0.625rem;
-            text-align: center;
-        }
-    }
-    &__links{
-        //border: 1px solid red;
+    // position relative
+    a {
+      position: relative;
+      font-size: $font-sm;
+      color: $grayishBlue;
+      transition: color 200ms ease-in-out;
 
-        // position relative
-        a{
-            position: relative;
-            font-size: $font-sm;
-            color: $grayishBlue;
-            transition: color 200ms ease-in-out;
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
 
-            &:not(:last-child){
-            margin-right: 32px;
-            }
-
-            /* 
+      /* 
             * cree un element qui n'existe pas dans le html
             * ::before creates a pseudo-element that is the first child of the selected element. 
             * It is often used to add cosmetic content to an element with the content property. 
             * It is inline by default.
             */
-            &::before{ // cree un pseudo-element pour chaque selecteur associe.
-                content:"";
-                display: block;
-                position: absolute;
-                height: 5px;
-                left: 0;
-                right: 0;
-                bottom: -30px;
-                background: linear-gradient(to right, $limeGreen, $darkBlue);
-                opacity: 0;
-                transition: opacity 300ms ease-in-out;
-            }
-            &:hover{
-                color: $darkBlue;
+      &::before {
+        // cree un pseudo-element pour chaque selecteur associe.
+        content: "";
+        display: block;
+        position: absolute;
+        height: 5px;
+        left: 0;
+        right: 0;
+        bottom: -30px;
+        background: linear-gradient(to right, $limeGreen, $darkBlue);
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+      }
+      &:hover {
+        color: $darkBlue;
 
-                &::before{
-                opacity: 1;
-                }
-            }    
-        }       
+        &::before {
+          opacity: 1;
+        }
+      }
     }
+  }
 }
 /**
 * padding the padding area on all four sides of an element at once.
@@ -142,4 +140,3 @@
 * :last-child  represents the last element among a group of sibling elements.
 *not last child css
 */
- 

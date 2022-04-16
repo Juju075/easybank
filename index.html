@@ -1,333 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300" rel="stylesheet">   
-  <link rel="stylesheet" href="sass/style.css">
-  <link rel="stylesheet" href="">
-  <title>Frontend Mentor | Easybank landing page</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="" />
+    <title>Frontend Mentor | Easybank landing page</title>
+  </head>
+  <body>
+    <!-- =================================================================== -->
+    <!-- Section Header -->
+    <!-- =================================================================== -->
+    <header class="header">
+      <!-- Overlay display menu -->
+      <div class="overlay has-fade"></div>
+      <!-- Navbar Container (1 Ligne ) -->
+      <nav class="container container--pall flex flex-jc-sb flex-ai-c">
+        <!-- 1 element Logo -->
+        <a href="/" class="header__logo">
+          <img src="images/logo.svg" alt="Easybank" />
+        </a>
+        <!-- 1 element Hamburger-->
+        <a id="btnHamburger" href="#" class="header__toogle hide-for-desktop">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <!-- 1 element / Affichage conditionnel -->
+        <div class="header__links hide-for-mobile">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Blog</a>
+          <a href="#">header__links</a>
+        </div>
+        <!-- Fin element Hamburger menu -->
+        <!-- 1 element Button-->
+        <!-- cta = call to action-->
+        <a href="#" class="button hide-for-mobile">Request Invite</a>
+      </nav>
+      <!-- Hamburger menu -->
+      <!-- 1 element -->
+      <div class="header__menu container has-fade">
+        <a href="#" class="">Home</a>
+        <a href="#" class="">About</a>
+        <a href="#" class="">Contact</a>
+        <a href="#" class="">Blog</a>
+        <a href="#" class="">header__menu</a>
+      </div>
+    </header>
+    <!-- Nouvelle section Display flex -->
+    <!-- A hero image is a website design term used to describe 
+  sized banner image at the top of a website. -->
+    <!-- ======================================================================= -->
+    <!-- Session Hero -->
+    <!-- ======================================================================= -->
+    <section class="hero">
+      <!-- 1 Ligne container -->
+      <div class="container">
+        <!-- pour pouvoir ajouter une coleur de fond -->
+        <div class="hero__image"></div>
 
-</head>
-<body>
+        <!-- 1 Bloc multi-elements container CSS Grid-->
+        <div class="hero__text container--px">
+          <h1>Next generation digital banking</h1>
+          <p>
+            Take your financial life online. Your Easybank account will be a
+            one-stop-shop for spending, saving, budgeting, investing, and much
+            more. Request Invite
+          </p>
 
-  <!-- Section Header -->
-  <header class="header">
+          <!-- Button cta -->
+          <a href="#" class="button">Request Invite</a>
+        </div>
+        <!-- Fin de ligne -->
+      </div>
+      <!-- 1 element image pas de container rester a 0 de pdg-->
+    </section>
+    <!-- ======================================================================= -->
+    <!-- Section Feature -->
+    <!-- ======================================================================= -->
+    <section class="feature">
+      <div class="feature container container--pall">
+        <div class="feature__intro">
+          <h2>Why choose Easybank?</h2>
+          <p>
+            Test We leverage Open Banking to turn your bank account into your
+            financial hub. Control your finances like never before.
+          </p>
+        </div>
 
-    <!-- Overlay display menu -->
-    <div class="overlay has-fade"></div>
+        <!-- Bloc Items-->
+        <div class="feature__flex">
+          <!-- Item 1 -->
+          <div class="feature__item">
+            <div class="feature__icon">
+              <img src="/images/icon-online.svg" alt="" />
+            </div>
+            <div class="feature__title">Online Banking</div>
+            <div class="feature__description">
+              Test Our modern web and mobile applications allow you to keep
+              track of your finances wherever you are in the world.
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="feature__item">
+            <div class="feature__icon">
+              <img src="/images/icon-online.svg" alt="" />
+            </div>
 
- 
-    <!-- Navbar Container (1 Ligne ) -->
-    <nav class="container container--pall flex flex-jc-sb flex-ai-c">
+            <div class="feature__title">Simple Budgeting</div>
 
-      <!-- 1 element Logo -->
-      <a href="/" class="header__logo">
-        <img src="images/logo.svg" alt="Easybank"/>
-      </a>
+            <div class="feature__description">
+              See exactly where your money goes each month. Receive
+              notifications when you’re close to hitting your limits.
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="feature__item">
+            <div class="feature__icon">
+              <img src="/images/icon-online.svg" alt="" />
+            </div>
+            <div class="feature__title">Fast Onboarding</div>
+            <div class="feature__description">
+              We don’t do branches. Open your account in minutes online and
+              start taking control of your finances right away.
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="feature__item">
+            <div class="feature__icon">
+              <img src="/images/icon-online.svg" alt="" />
+            </div>
+            <div class="feature__title">Open API</div>
+            <div class="feature__description">
+              Manage your savings, investments, pension, and much more from one
+              account. Tracking your money has never been easier.
+            </div>
+          </div>
+        </div>
+        <!-- Fin  -->
+      </div>
+    </section>
+    <!-- ======================================================================= -->
+    <!-- Section Articles -->
+    <!-- ======================================================================= -->
+    <section class="articles">
+      <!-- Container -->
+      <div class="article__content container container--pall">
+        <h2>Latest Articles</h2>
+        <!-- 1 Ligne -->
+        <div class="article__grid">
+          <!-- 1 Bloc -->
+          <a href="#" class="article__item">
+            <div
+              class="article__image"
+              style="background-image: url('/images/image-currency.jpg')"
+            ></div>
+            <div class="article__text">
+              <div class="article__author">By Claire Robinson</div>
+              <div class="article__title">
+                Receive money in any currency with no fees
+              </div>
+              <div class="article__description">
+                The world is getting smaller and we’re becoming more mobile. So
+                why should you be forced to only receive money in a single …
+              </div>
+            </div>
+          </a>
 
-    <!-- 1 element Hamburger-->  
-      
-    
-      <a id="btnHamburger" href="#" class="header__toogle hide-for-desktop">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
+          <a href="#" class="article__item">
+            <div
+              class="article__image"
+              style="background-image: url('/images/image-restaurant.jpg')"
+            ></div>
+            <div class="article__text">
+              <div class="article__author">By Wilson Hutton</div>
+              <div class="article__title">
+                Treat yourself without worrying about money
+              </div>
+              <div class="article__description">
+                Our simple budgeting feature allows you to separate out your
+                spending and set realistic limits each month. That means you …
+              </div>
+            </div>
+          </a>
 
-      <!-- 1 element / Affichage conditionnel -->    
-      <div class="header__links hide-for-mobile">
-        <a href="#">Home</a>
-        <a href="#">About</a>
+          <a href="#" class="article__item">
+            <div
+              class="article__image"
+              style="background-image: url('/images/image-plane.jpg')"
+            ></div>
+            <div class="article__text">
+              <div class="article__author">By Wilson Hutton</div>
+              <div class="article__title">
+                Take your Easybank card wherever you go
+              </div>
+              <div class="article__description">
+                We want you to enjoy your travels. This is why we don’t charge
+                any fees on purchases while you’re abroad. We’ll even show you …
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="article__item">
+            <div
+              class="article__image"
+              style="background-image: url('/images/image-confetti.jpg')"
+            ></div>
+            <div class="article__text">
+              <div class="article__author">By Claire Robinson</div>
+              <div class="article__title">
+                Our invite-only Beta accounts are now live!
+              </div>
+              <div class="article__description">
+                After a lot of hard work by the whole team, we’re excited to
+                launch our closed beta. It’s easy to request an invite through
+                the site …
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ======================================================================= -->
+    <!-- Section Footer -->
+    <!-- ======================================================================= -->
+    <footer class="footer">
+      <!-- 1 Bloc -->
+      <img src="/images/logo-dark.svg" alt="logo" class="footer__logo" />
+
+      <div class="footer__social">
+        <a href="#"><img src="images/icon-facebook.svg" alt="Facebook" /></a>
+        <a href="#"><img src="images/icon-youtube.svg" alt="Youtube" /></a>
+        <a href="#"><img src="images/icon-twitter.svg" alt="Twitter" /></a>
+        <a href="#"><img src="images/icon-pinterest.svg" alt="Pinterest" /></a>
+        <a href="#"><img src="images/icon-instagram.svg" alt="Instagram" /></a>
+      </div>
+
+      <!-- 1 Bloc links1-->
+      <div class="footer__links col1">
+        <a href="#">About Us</a>
         <a href="#">Contact</a>
         <a href="#">Blog</a>
+      </div>
+
+      <!-- 1 Bloc  links2-->
+      <div class="footer__links col2">
         <a href="#">Careers</a>
+        <a href="#">Support</a>
+        <a href="#">Privacy Policy</a>
       </div>
+      <!-- 1 Bloc -->
 
-    <!-- Fin element Hamburger menu --> 
-
-      <!-- 1 element Button--> 
       <!-- cta = call to action-->
-      <a href="#" class="button hide-for-mobile">Request Invite</a>
-    </nav>
 
-    <!-- Nouvelle (ligne) Hamburger menu -->
-    <!-- 1 element -->   
-    <div class="header__menu container has-fade">
-     <a href="#" class="">Home</a>
-     <a href="#" class="">About</a>
-     <a href="#" class="">Contact</a>
-     <a href="#" class="">Blog</a>
-     <a href="#" class="">Careers</a>
-    </div>
-
-  </header>
-  <!-- Nouvelle section Display flex -->
-  <!-- A hero image is a website design term used to describe 
-  sized banner image at the top of a website. -->
-
-  <section class="hero">
-
-    <!-- 1 Ligne container -->
-    <div class="container"> <!-- pour pouvoir ajouter une coleur de fond -->
-      <div class="hero__image"></div>
-  
-      <!-- 1 Bloc multi-elements container CSS Grid-->
-      <div class="hero__text container--px">
-        <h1>Next generation digital banking 
-        </h1>
-        <p>
-          Take your financial life online. Your Easybank account will be a one-stop-shop 
-          for spending, saving, budgeting, investing, and much more.
-          Request Invite
-        </p>
-
-        <!-- Button cta -->
+      <div class="footer__cta">
         <a href="#" class="button">Request Invite</a>
+
+        <div class="footer__copyright">
+          &copy; Easybank. All Right Reserved.
+        </div>
       </div>
-      <!-- Fin de ligne -->
-
-    </div>
-    <!-- 1 element image pas de container rester a 0 de pdg-->
-    
-
-  </section>
-
-  <section class="feature ">
-    
-    <div class="feature container container--pall">
-      
-      <div class="feature__intro">
-        <h2>Why choose Easybank?</h2>
-        <p>We leverage Open Banking to turn your bank account into your financial hub. Control 
-          your finances like never before.
-        </p>
-      </div>
-  
-    <div class="feature__flex">   <!-- Flex -->
-  
-      <div class="feature__item">
-        <div class="feature__icon">
-          <img src="/images/icon-online.svg" alt="">
-        </div>
-        <div class="feature__title">
-          Online Banking
-        </div>
-        <div class="feature__description">  
-          Our modern web and mobile applications allow you to keep track of your finances 
-          wherever you are in the world.        
-        </div>
-  
-      </div>
-  
-  
-      <div class="feature__item">
-  
-        <div class="feature__icon">
-          <img src="/images/icon-online.svg" alt="">
-        </div>
-  
-        <div class="feature__title">
-          Simple Budgeting
-        </div>
-  
-        <div class="feature__description">  
-          See exactly where your money goes each month. Receive notifications when you’re 
-          close to hitting your limits.      
-        </div>
-  
-      </div>
-  
-  
-      <div class="feature__item">
-  
-        <div class="feature__icon">
-          <img src="/images/icon-online.svg" alt="">
-        </div>
-  
-        <div class="feature__title">
-          Fast Onboarding
-        </div>
-  
-        <div class="feature__description">  
-          We don’t do branches. Open your account in minutes online and start taking control 
-          of your finances right away.       
-        </div>
-  
-      </div>
-      <div class="feature__item">
-  
-        <div class="feature__icon">
-          <img src="/images/icon-online.svg" alt="">
-        </div>
-  
-        <div class="feature__title">
-          Open API
-        </div>
-  
-        <div class="feature__description">  
-          Manage your savings, investments, pension, and much more from one account. Tracking 
-          your money has never been easier.        
-        </div>
-  
-      </div>    
-    </div> <!-- Fin  -->
-    </div>
-
-  </section>
-
-  <section class="articles">
-    <!-- Container -->
-  <div class="article__content container container--pall">
-
-    <h2>Latest Articles</h2>
-    <!-- 1 Ligne -->
-    <div class="article__grid">
-    <!-- 1 Bloc -->
-      <a href="#" class="article__item">
-        <div class="article__image" style="background-image: url('/images/image-currency.jpg')"></div>
-        <div class="article__text">
-          <div class="article__author">By Claire Robinson</div>
-          <div class="article__title">Receive money in any currency with no fees</div>
-          <div class="article__description">The world is getting smaller and we’re becoming more mobile. So why should you be 
-            forced to only receive money in a single …</div>
-        </div>
-      </a>
-
-      <a href="#" class="article__item">
-        <div class="article__image" style="background-image: url('/images/image-restaurant.jpg')"></div>
-        <div class="article__text">
-          <div class="article__author">By Wilson Hutton</div>
-          <div class="article__title">Treat yourself without worrying about money</div>
-          <div class="article__description">Our simple budgeting feature allows you to separate out your spending and set 
-              realistic limits each month. That means you …</div>
-        </div>
-      </a>
-
-      <a href="#" class="article__item">
-        <div class="article__image" style="background-image: url('/images/image-plane.jpg')"></div>
-        <div class="article__text">
-          <div class="article__author">By Wilson Hutton</div>
-          <div class="article__title">Take your Easybank card wherever you go</div>
-          <div class="article__description">We want you to enjoy your travels. This is why we don’t charge any fees on purchases 
-              while you’re abroad. We’ll even show you …</div>
-        </div>
-      </a>
-
-      <a href="#" class="article__item">
-        <div class="article__image" style="background-image: url('/images/image-confetti.jpg')"></div>
-        <div class="article__text">
-          <div class="article__author">By Claire Robinson</div>
-          <div class="article__title">Our invite-only Beta accounts are now live!</div>
-          <div class="article__description">After a lot of hard work by the whole team, we’re excited to launch our closed beta. 
-              It’s easy to request an invite through the site …</div>
-        </div>
-      </a>
-
-
-
-
-  
-      </div>
-    </div>
-
-  </section>
-
-  <footer class="footer">
-
-   <!-- 1 Bloc -->
-    <img src="/images/logo-dark.svg" alt="logo" class="footer__logo">
-
-    <div class="footer__social">
-      <a href="#"><img src="images/icon-facebook.svg" alt="Facebook"></a>
-      <a href="#"><img src="images/icon-youtube.svg" alt="Youtube"></a>
-      <a href="#"><img src="images/icon-twitter.svg" alt="Twitter"></a>
-      <a href="#"><img src="images/icon-pinterest.svg" alt="Pinterest"></a>
-      <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"></a>
-    </div>
-
-    <!-- 1 Bloc links1-->
-    <div class="footer__links col1">
-      <a href="#">About Us</a>
-      <a href="#">Contact</a>
-      <a href="#">Blog</a>
-    </div>
-
-    <!-- 1 Bloc  links2-->
-    <div class="footer__links col2">
-      <a href="#">Careers</a>
-      <a href="#">Support</a>
-      <a href="#">Privacy Policy</a>
-    </div>
-    <!-- 1 Bloc -->
-  
-    <!-- cta = call to action-->
-
-    <div class="footer__cta"> 
-    
-      <a href="#" class="button">Request Invite</a>
-
-      <div class="footer__copyright">
-        &copy; Easybank. All Right Reserved.
-      </div>
-
-    </div>
-
-
-  
-     
-
-  </footer>
- 
-
-
-  
-
-
-  
-  
-
-  
-  
-
-  
-
-
-  By Wilson Hutton
-  Treat yourself without worrying about money
-  Our simple budgeting feature allows you to separate out your spending and set 
-  realistic limits each month. That means you …
-
-  By Wilson Hutton
-  Take your Easybank card wherever you go
-  We want you to enjoy your travels. This is why we don’t charge any fees on purchases 
-  while you’re abroad. We’ll even show you …
-
-  By Claire Robinson
-  Our invite-only Beta accounts are now live!
-  After a lot of hard work by the whole team, we’re excited to launch our closed beta. 
-  It’s easy to request an invite through the site ...
-
-  
-
-  About Us
-  Contact
-  Blog
-  
-  
-  
-
-  Request Invite
-
-  © Easybank. All Rights Reserved
-  
-  <div class="attribution">
-    
-    Coded by <a href="#">Junior Kheve</a>.
-  </div>
-
-<script src="script.js"></script>
-</body>
+    </footer>
+    <div class="attribution">Coded by <a href="#">Junior Kheve</a>.</div>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -10,7 +10,9 @@ html {
 
 /* a voir html ou (*) */
 /* box-sizing définit la façon dont la hauteur et la largeur totale d'un élément est calculé  */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -29,7 +31,9 @@ body.noscroll {
   overflow: hidden;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin-top: 0px;
   font-weight: 300;
   line-height: 1.15;
@@ -57,7 +61,9 @@ h2 {
   }
 }
 
-a, a:visited, a:hover {
+a,
+a:visited,
+a:hover {
   text-decoration: none;
   color: white;
 }
@@ -75,7 +81,8 @@ a, a:visited, a:hover {
   align-content: center;
 }
 
-button, .button {
+button,
+.button {
   display: inline-block;
   padding: 0.875rem 2.1875rem;
   background: linear-gradient(to right, #31d35c, #2bb7da);
@@ -87,7 +94,8 @@ button, .button {
   font-size: 0.875rem;
   transition: opacity 300ms ease-in-out;
 }
-button:hover, .button:hover {
+button:hover,
+.button:hover {
   opacity: 0.75;
 }
 
@@ -107,6 +115,15 @@ button:hover, .button:hover {
 }
 
 /** @include Basecode */
+/** 
+1- --pall(padding all)
+2- --py(padding vertical)
+3- --px(padding horizontal)
+4- --pt(padding top)
+5- --pl(padding left)
+6- --pr(padding right)
+7- --pb(padding bottom)
+**/
 .container {
   max-width: 69.56rem;
   margin: auto;
@@ -163,12 +180,12 @@ button:hover, .button:hover {
 /** Section */
 .header {
   /** 
-  * Ajoute une animation fade-in a .overlay
-  * Selecteur d'element fils '>' permet de sélectionner les nœuds qui sont des fils directs 
-  * d'un élément donné.
-  */
+    * Ajoute une animation fade-in a .overlay
+    * Selecteur d'element fils '>' permet de sélectionner les nœuds qui sont des fils directs 
+    * d'un élément donné.
+    */
   /***
-  */
+    */
 }
 .header.open .overlay {
   display: block;
@@ -233,11 +250,11 @@ button:hover, .button:hover {
   color: #9698a6;
   transition: color 200ms ease-in-out;
   /* 
-  * cree un element qui n'existe pas dans le html
-  * ::before creates a pseudo-element that is the first child of the selected element. 
-  * It is often used to add cosmetic content to an element with the content property. 
-  * It is inline by default.
-  */
+        * cree un element qui n'existe pas dans le html
+        * ::before creates a pseudo-element that is the first child of the selected element. 
+        * It is often used to add cosmetic content to an element with the content property. 
+        * It is inline by default.
+        */
 }
 .header__links a:not(:last-child) {
   margin-right: 32px;
@@ -577,7 +594,11 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
 }
 .footer__logo {
   display: inline-block;
-  margin-bottom: 1.875rem;
+}
+@media (max-width: 63.9375em) {
+  .footer__logo {
+    margin-bottom: 1.875rem;
+  }
 }
 @media (min-width: 64em) {
   .footer__logo {
@@ -585,14 +606,19 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
   }
 }
 .footer__social {
-  margin-bottom: 1.875rem;
   /* :not() CSS pseudo-class represents 
   elements that do not match a list of selectors
   */
 }
+@media (max-width: 63.9375em) {
+  .footer__social {
+    margin-bottom: 1.875rem;
+  }
+}
 @media (min-width: 64em) {
   .footer__social {
     grid-area: social;
+    align-self: end;
   }
 }
 .footer__social a {
@@ -608,20 +634,38 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
   font-size: 0.9375rem;
 }
 @media (min-width: 64em) {
+  .footer__links {
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+@media (min-width: 64em) {
   .footer__links.col1 {
     grid-area: links1;
   }
 }
 .footer__links.col2 {
-  margin-bottom: 1.875rem;
+  /* margin-bottom: 1.875rem; */
+}
+@media (max-width: 63.9375em) {
+  .footer__links.col2 {
+    margin-bottom: 1.875rem;
+  }
 }
 @media (min-width: 64em) {
   .footer__links.col2 {
     grid-area: links2;
   }
 }
-.footer__links a {
-  line-height: 2.25;
+@media (max-width: 63.9375em) {
+  .footer__links a {
+    line-height: 2.25;
+  }
+}
+@media (min-width: 40em) {
+  .footer__cta {
+    margin-bottom: 1.875rem;
+  }
 }
 @media (min-width: 64em) {
   .footer__cta {
@@ -631,10 +675,18 @@ permet aux auteurs de définir les étapes qui composent la séquence d'une anim
 .footer__cta a.button {
   margin-bottom: 1.875rem;
 }
+.footer__copyright {
+  font-size: 0.9375rem;
+}
 @media (min-width: 64em) {
   .footer__copyright {
     grid-area: copyright;
+    align-self: end;
+    justify-self: end;
   }
+}
+.footer .attribution {
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
