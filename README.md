@@ -8,7 +8,7 @@ Responsive SASS<br>
 
 
 Section of contents<br>
-- Adobe xd (Mesuration & Mobile first)
+- Adobe xd (measurements & mobile first)
 - Navbar 
 - Hamburger javascript & overlay
 - Hero images superposition
