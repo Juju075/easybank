@@ -16,8 +16,6 @@ Section of contents<br>
 - Footer grid
 
 Visit website: http://easybank.bempime-kheve.com/<br>
-Author:<br>
-Bempime Kheve<br>
-
+Author: Bempime Kheve<br>
 ![logo_k_black_80x80](https://user-images.githubusercontent.com/59140742/166146861-790f5f8a-de21-4d69-8fa2-ef598139e320.png)
 
