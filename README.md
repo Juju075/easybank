@@ -4,6 +4,14 @@
 Responsive SASS<br>
 12/26/20<br><br>
 
+#Table of contents<br>
+- Adobe xd
+- Navbar
+- Hamburger javascript & overlay
+- Hero images superposition
+- Flexbox cards
+- Footer grid
+
 Visit website: http://easybank.bempime-kheve.com/<br>
 Author:<br>
 Bempime Kheve<br>
