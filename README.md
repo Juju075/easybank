@@ -3,7 +3,6 @@
 
 Responsive SASS<br>
 12/26/20<br><br>
-
 ![html5](https://user-images.githubusercontent.com/59140742/166147078-731b2546-b4cb-4b39-b437-275bc4ab53d5.png) ![sass](https://user-images.githubusercontent.com/59140742/166147100-8bc4134a-8eff-4ecc-9f48-16ce22d7ee79.png) ![logo_js](https://user-images.githubusercontent.com/59140742/166147086-786f6a50-6dd8-4af6-aa5f-7a579a90c19d.png)
 
 
