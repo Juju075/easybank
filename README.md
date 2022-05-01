@@ -6,4 +6,6 @@ Responsive SASS<br>
 
 Visit website: http://easybank.bempime-kheve.com/<br>
 Author:<br>
-Bempime Kheve
+Bempime Kheve<br>
+
+![logo_k_black](https://user-images.githubusercontent.com/59140742/166146815-ef715f5c-a132-4cd2-98c3-b29d76302356.png)
