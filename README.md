@@ -4,9 +4,9 @@
 Responsive SASS<br>
 12/26/20<br><br>
 
-#Table of contents<br>
-- Adobe xd
-- Navbar
+Table of contents<br>
+- Adobe xd (Mesuration & Mobile first)
+- Navbar 
 - Hamburger javascript & overlay
 - Hero images superposition
 - Flexbox cards
