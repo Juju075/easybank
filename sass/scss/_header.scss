@@ -23,6 +23,7 @@
       }
     }
   }
+
   /** 
     * Ajoute une animation fade-in a .overlay
     * Selecteur d'element fils '>' permet de sélectionner les nœuds qui sont des fils directs 
@@ -61,8 +62,6 @@
       background-color: $darkBlue;
       transition: color 200ms ease-in-out;
       transform-origin: 3px 1px;
-
-      //
 
       //espace
       &:not(:last-child) {
