@@ -8,4 +8,5 @@ Visit website: http://easybank.bempime-kheve.com/<br>
 Author:<br>
 Bempime Kheve<br>
 
-![logo_k_black](https://user-images.githubusercontent.com/59140742/166146815-ef715f5c-a132-4cd2-98c3-b29d76302356.png)
+![logo_k_black_80x80](https://user-images.githubusercontent.com/59140742/166146861-790f5f8a-de21-4d69-8fa2-ef598139e320.png)
+
